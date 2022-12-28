@@ -81,7 +81,7 @@ function Navbar(props) {
             <ListItemText primary={"Cart"} />
           </ListItemButton>
         </ListItem>
-        {userInfo.isAdmin && (
+        {userInfo?.isAdmin && (
           <>
             <ListItem disablePadding>
               <ListItemButton
