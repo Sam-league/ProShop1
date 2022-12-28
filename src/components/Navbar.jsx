@@ -18,7 +18,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../slices/UserSlice";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { clearCart } from "../slices/CartSlice";
+import { clearCart, emptyCart } from "../slices/CartSlice";
 
 const drawerWidth = 240;
 // const navItems = ["cart", "Sign In"];
@@ -46,7 +46,7 @@ function Navbar(props) {
   };
   const handleLogout = () => {
     dispatch(logout());
-    dispatch(clearCart());
+    dispatch(emptyCart());
     handleClose();
     navigate("/");
   };
