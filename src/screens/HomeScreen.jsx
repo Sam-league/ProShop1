@@ -24,9 +24,6 @@ const HomeScreen = () => {
         {products?.map((item) => (
           <Product key={item._id} product={item} />
         ))}
-        {products?.map((item) => (
-          <Product key={item._id} product={item} />
-        ))}
       </Grid>
     </>
   );
