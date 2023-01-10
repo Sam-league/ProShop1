@@ -111,7 +111,7 @@ const cartSlice = createSlice({
     },
     [fetchCartItems.fulfilled]: (state, action) => {
       state.loading = false;
-      state.items = action.payload.items;
+      state.items = action.payload.items;   
       state.amount = totalAmount(action.payload.items);
       state.subQty = totalQty(action.payload.items);
     },
